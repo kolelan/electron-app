@@ -15,7 +15,9 @@ electron-react-app/
 │   └── shared/         # Общие утилиты
 ├── tests/              # Тесты
 │   ├── App.test.tsx    # Тесты
-│   └── FileUpload.test.tsx # Тесты
+│   ├── FileUpload.test.tsx # Тесты
+│   ├── global.d.ts
+│   └── setupTests.ts
 ├── dist/               # Собранные файлы
 ├── webpack.config.js
 ├── package.json

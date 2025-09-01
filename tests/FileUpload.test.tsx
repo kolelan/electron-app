@@ -9,7 +9,19 @@ describe('FileUpload Component', () => {
         render(<FileUpload onFileSelect={mockOnFileSelect} />);
 
         expect(screen.getByText('Выбрать файл')).toBeInTheDocument();
+        expect(screen.getByText('Перетащите файл сюда или нажмите кнопку')).toBeInTheDocument();
     });
 
-    // Дополнительные тесты можно добавить здесь
+    test('calls onFileSelect when file is selected', () => {
+        const mockOnFileSelect = jest.fn();
+        render(<FileUpload onFileSelect={mockOnFileSelect} />);
+
+        // Используем роль для поиска input file
+        const fileInput = screen.getByLabelText('file-input');
+        const file = new File(['test content'], 'test.txt', { type: 'text/plain' });
+
+        fireEvent.change(fileInput, { target: { files: [file] } });
+
+        expect(mockOnFileSelect).toHaveBeenCalledWith(file);
+    });
 });
