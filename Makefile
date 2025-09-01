@@ -5,3 +5,15 @@ run-struct-creator:
 
 get-struct-creator:
 	curl -L -o create_structure.py https://raw.githubusercontent.com/kolelan/create_structure/main/create_structure.py
+
+install:
+	npm install
+
+start:
+	npm start
+
+build:
+	npm run build:dev
+
+test:
+	npm test

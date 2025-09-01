@@ -1,10 +1,12 @@
 electron-react-app/
 ├── src/
 │   ├── main/           # Electron главный процесс
-│   │   └── index.ts
+│   │   ├── index.ts
+│   │   └── preload.ts
 │   ├── renderer/       # React приложение
 │   │   ├── main.tsx
 │   │   ├── App.tsx
+│   │   ├── index.html
 │   │   ├── components/
 │   │   │   ├── FileUpload.tsx
 │   │   │   └── DataDisplay.tsx
@@ -12,7 +14,12 @@ electron-react-app/
 │   │       └── index.ts
 │   └── shared/         # Общие утилиты
 ├── tests/              # Тесты
+│   ├── App.test.tsx    # Тесты
+│   └── FileUpload.test.tsx # Тесты
 ├── dist/               # Собранные файлы
 ├── webpack.config.js
 ├── package.json
+├── jest.config.js
+├── tsconfig.main.json
+├── tsconfig.renderer.json
 └── tsconfig.json
