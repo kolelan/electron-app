@@ -1,0 +1,18 @@
+electron-react-app/
+├── src/
+│   ├── main/           # Electron главный процесс
+│   │   └── index.ts
+│   ├── renderer/       # React приложение
+│   │   ├── main.tsx
+│   │   ├── App.tsx
+│   │   ├── components/
+│   │   │   ├── FileUpload.tsx
+│   │   │   └── DataDisplay.tsx
+│   │   └── types/
+│   │       └── index.ts
+│   └── shared/         # Общие утилиты
+├── tests/              # Тесты
+├── dist/               # Собранные файлы
+├── webpack.config.js
+├── package.json
+└── tsconfig.json
